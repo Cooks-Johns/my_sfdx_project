@@ -1,0 +1,33 @@
+WARNING: We're deprecating OrgPreferenceSettings. 
+We've added the settings to other metadata types in Winter '20. 
+You can continue to use OrgPreferenceSettings 
+until they are replaced by their corresponding settings 
+in Spring '20. But why wait? Here's exactly what you need 
+to update in the scratch org definition file.
+
+Replace the orgPreferenceSettings section:
+{
+    "settings": {
+        "orgPreferenceSettings": {
+            "s1DesktopEnabled": true,
+            "selfSetPasswordInApi": true,
+            "s1EncryptedStoragePref2": false
+        }
+    }
+}
+With their updated settings:
+{
+    "settings": {
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        },
+        "securitySettings": {
+            "passwordPolicies": {
+                "enableSetPasswordInApi": true
+            }
+        },
+        "mobileSettings": {
+            "enableS1EncryptedStoragePref2": false
+        }
+    }
+}
